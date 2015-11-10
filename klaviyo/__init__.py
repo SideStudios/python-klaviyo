@@ -110,9 +110,9 @@ class Klaviyo(object):
         response = requests.get('https://%s/%s?%s' % (server, path, params))
 
         if response.text == '1':
-            return true
+            return True
         if response.text == '0':
-            return false
+            return False
         return response
 
     def _post(self, path, params):
